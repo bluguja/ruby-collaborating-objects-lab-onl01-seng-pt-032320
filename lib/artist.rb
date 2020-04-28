@@ -47,6 +47,10 @@ class Artist
     
  
    def print_songs
-     self.songs. {|song| puts song.name} 
-   end
+    Song.all.select do |value|
+      if value.artist == self
+        puts "#{value.name}"
+      end
+    end
+  end
 end
