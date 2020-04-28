@@ -13,12 +13,14 @@ def Song.all
 end
 
 
-  def self.new_by_filename(filename)
-    artist_name, song_name, extra = filename.split(" - ")
-    song = self.new(song_name)
-    artist = Artist.find_or_create_by_name(artist_name)
-    artist.add_song(song)
-  end
+  def self.new_by_filename(file_name)
+        song_name = file_name.split(" - ")[1]
+        artist_name = file_name.split(" - ")[0]
+        song = Song.new(song_name)
+        song.name = song_name
+        song.artist_name = artist_name
+        song
+    end
 end
 
 
