@@ -15,7 +15,7 @@ end
 def artist_name=(name) 
  artist = Artist.all.find { |value| value.name==name }
  if artist
-   song.artist=artist
+   self.artist=artist
    else
      art = Artist.new(name)
      self.artist = art
