@@ -13,7 +13,7 @@ def Song.all
 end
 
 def artist_name=(name) 
-  Artist.all
+  Artist.all.find { |value| }
 end
 
   def self.new_by_filename(file_name)
