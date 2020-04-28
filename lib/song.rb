@@ -18,7 +18,7 @@ def artist_name=(name)
    song.artist=artist
    else
      art = Artist.new(name)
-     song.artist = art
+     self.artist = art
    end
 end
 
