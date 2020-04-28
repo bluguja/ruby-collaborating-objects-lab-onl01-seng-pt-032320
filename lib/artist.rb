@@ -17,12 +17,12 @@ class Artist
     
   end
   
-  def add_song_by_name(name)
-    song = self.new(name)
-    self.songs << song
-    song.artist = self
+  # def add_song_by_name(name)
+  #   song = self.new(name)
+  #   self.songs << song
+  #   song.artist = self
    
-  end
+  # end
   
   def songs
   Song.all.select do |song| 
