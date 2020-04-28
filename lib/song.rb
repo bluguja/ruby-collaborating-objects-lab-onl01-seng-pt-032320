@@ -19,6 +19,7 @@ def artist_name=(name)
    else
      art = Artist.new(name)
      song.artist = art
+   end
 end
 
   def self.new_by_filename(file_name)
