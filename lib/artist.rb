@@ -36,16 +36,14 @@ class Artist
     
   
   
-  def self.find_or_create_by_name(name)
-		@@all.find  do |artist|
-			if artist.name == name 
-				 return artist
-			end 
-		end 
-		
-      self.new(name)
-			
-	end 
+  def self.find_or_create_by_name(artist_name)
+    artist =  @@all.find{|e| e.name==artist_name}
+    if artist
+      	return artist
+    else
+      	return self.new(artist_name)
+    end
+  end
     
  
   def self.song_count
