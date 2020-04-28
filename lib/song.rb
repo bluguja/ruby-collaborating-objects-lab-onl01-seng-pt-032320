@@ -13,7 +13,11 @@ def Song.all
 end
 
 def artist_name=(name) 
-  Artist.all.find { |value| }
+ artist = Artist.all.find { |value| value.name==name }
+ if artist
+   song.artist=artist
+   else
+     art = Artist.new(name)
 end
 
   def self.new_by_filename(file_name)
